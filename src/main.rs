@@ -49,7 +49,7 @@ async fn main() -> std::io::Result<()> {
             .wrap(Cors::permissive()) // Enable CORS
             .route("/upload", web::post().to(upload_pdf))
     })
-    .bind(("127.0.0.1", 9000))?
+    .bind(("0.0.0.0", 9000))?
     .run()
     .await
 }
